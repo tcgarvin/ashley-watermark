@@ -51,7 +51,7 @@ def fetch_watermark() -> Image.Image:
 def locate_target_files(search_path : Path) -> Iterable[Path]:
     target_files = []
     for file_path in search_path.iterdir():
-        if file_path.suffix not in (".png", ".jpg"):
+        if file_path.suffix not in (".png", ".jpg", ".jpeg"):
             continue
 
         output_path = generate_output_path(file_path)
